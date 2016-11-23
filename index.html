@@ -1,0 +1,845 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>oppo</title>
+		<style>
+			*{margin:0px;padding:0px;list-style: none;}
+			body{
+				font-family:'微软雅黑';	
+			}
+			.fixedtwo{
+				width:42px;
+				height:74px;
+				position:fixed;
+				right:31px;
+				bottom:20px;
+				background:transparent;
+			}
+			.fixed1,.fixed2{
+				width:42px;
+				height:36px;
+				background:#ededed;
+				position:relative;
+			}
+			.fixed1 a,.fixed2 a{
+				display:none;
+			}
+			.fixed1 a span,.fixed2 a span{
+				margin-left:13px;
+			}
+			.fixed1:hover a,.fixed2:hover a{
+				width:120px;
+				height:36px;
+				background:green;
+				position:absolute;
+				right:0px;
+				display:block;
+				line-height:36px;
+				font-size:0.8125rem;
+				color:white;
+			}
+
+			.fixed2{margin-top:2px;}
+			/*导航栏头*/
+			.header{
+				width:1263px;
+				height:113px;
+				/*background:pink;*/
+				box-shadow: 0 3px 3px #e6e6e6;
+			}
+			/*第一行导航栏*/
+			.head1{
+	height:35px;
+	background:#009B72;
+}
+.head1 .nav{
+	width:1176px;
+	height:35px;
+	margin-left:31.5px;
+	padding:0 12px;
+
+}
+.nav1 li a{
+	float:left;
+	text-align:center;
+	line-height: 35px;
+	color:white;
+	padding:0 20px;
+	font-weight:bold;
+	text-decoration:none;
+	border-left:1px solid white;
+	 font-size: 0.8125rem;
+}
+.head1  li:hover a{
+	background:#2aad6f;
+	color:#FFF;
+}
+.nav2 li a{
+	line-height:35px;
+	width:92px;
+	color:white;
+	font-weight:bold;
+	text-decoration:none;
+	border-left:1px solid white;
+	float:right;
+	text-align:center;
+	 font-size: 0.8125rem;
+} 
+.clear{
+	overflow:hidden;
+}	
+.clear:after{
+	content:"";
+	display: block;
+	width:100%;
+	height:0px;
+	clear:both;
+}
+.head2{
+	height:78px;
+}
+.logo{
+	margin-top:26px;
+	margin-left:12px;
+	float:left;
+}
+
+.menu>li{
+	width:74px;
+	height:78px;
+	line-height:78px;
+	float:right;
+	text-align: center;
+	position: relative;
+}
+.menu li a{
+
+	text-decoration:none;
+	color:black;
+	font-weight:bold;
+}
+.sub-menu {
+	display: none;
+	border:1px solid black;
+	position: absolute;
+	top:75px;
+	right:-60px;
+	background:green;	
+}
+.sub-menu li{
+	width:200px;
+	height:30px;
+	border-bottom: 1px solid #3bcf89;
+	line-height:30px;
+}
+.sub-menu li a{	
+	color:white;	
+}
+.shop:hover .sub-menu{
+	display: block;
+}
+			/**/
+			.container{
+				margin:0 auto;
+				width:1263px;
+			}
+			.lunbo{
+				width:100%;
+				height:525px;						
+			}			
+			.plus{
+				width:100%;
+				height:310px;
+				margin-top:100px;
+				background: transparent;
+			}
+			.zuo,.you{
+				float:left;
+			}
+			.zuo{
+				margin-left:50px;
+			}
+			.you{
+				margin-left:60px;
+			}
+			.weibo{
+				height:370px;
+				margin-top:170px;								
+			}
+			.one,.two,.three{
+				width:352px;
+				height:370px;
+				float:left;
+				margin-left:60px;
+			}
+			.one .zhimei{
+				margin-top:20px;
+			}
+			.c1,.c3,.c5{
+				width:68px;
+				height:68px;
+			} 
+			.c2,.c4,.c6{
+				width:272px;
+				height:78px;
+				margin-left:8px;
+				border-bottom:1px solid #ccc;
+			}
+			.c1,.c2,.c3,.c4,.c5,.c6{
+				float:left;
+				margin-top:20px;
+			}
+			.c1{
+				background: url(img/c1.jpg);
+			}
+			.c3{
+				background:url(img/c2.jpg);
+			}
+			.c5{
+				background:url(img/c3.jpg);
+			}
+			a{ 
+				text-decoration:none;
+			}
+			.c2 p,.c4 p,.c6 p{
+				margin-top:12px;
+				color:#1f8657;
+			}
+			.one h2,.two h2{
+				font-size:22px;
+				margin-bottom:4px;
+				color:#1f8657;
+			}
+			.one h3,.two h3{
+				font-size:17px;
+				color:black;
+			}
+			.twei{
+				width:350px;
+				height:30px;
+				border-bottom:1px solid #d2d2d2 ;
+			}
+			.twei div{
+				float:left;
+				height:28px;
+				width:45px;
+				font-size:14px;
+				margin-left:10px;
+				text-align:right;
+				line-height:30px;
+				overflow: hidden;
+			}
+			#ifram{
+				border: hidden;
+				width:352px;
+				height:370px;
+			}
+
+			.huisebg{
+				background:#ededed;
+			}
+			.vip{
+				height:305px;
+				margin-top:70px;
+				padding-top:70px;
+				padding-bottom:70px;	
+			}
+			.vone,.vtwo,.vthree,.vfour{
+				width:300px;
+				height:300px;
+				float:left;
+				position: relative;
+			}
+			.vone{
+				background: url(img/vone.jpg);
+				margin-left:32px;
+			}
+			.vtwo{background: url(img/vtwo.jpg);}			
+			.vthree{background:url(img/vthree.jpg);}
+			.vfour{background: url(img/vfour.jpg);}
+			.vvone,.vvtwo,.vvthree,.vvfour{
+				width:120px;
+				height:120px;
+				position: absolute;
+				top:90px;
+				left:90px;
+				background: green;
+				border-radius:150px;
+			}
+			.vip div p {
+				color:white;
+				font-weight: bold;
+				font-size: 21px;
+			}
+			.vip .vone p{margin:30px 102px;}
+			.vip .vtwo p{margin:30px 97px;}
+			.vip .vthree p{margin:30px 85px;}
+			.vip .vfour p{margin:30px 95px;}
+			.vip div:hover div{
+				background:white;
+			}
+			.footer{
+				width:1263px;				
+			}
+			.footline{
+				width:1263px;
+				height:584px;
+				margin-top:50px;				
+			}
+			.ffirst{
+				height:112px;				
+			}
+			 .ff1,.ff2,.ff3{
+			 width:384px;
+			 height:112px;
+			 background:#2aad6f;
+			 float:left;
+			 margin-bottom:22px;
+			}
+			.ff1{
+				margin-left:31.5px;
+				padding-left:12px;
+			}
+			.ff1 .aff1{
+				width:303.98px;
+				height:78px;
+				display:block;
+				margin:17px 40px;
+			}
+			.ff1 .aff1 .img1{
+				width:122px;
+				height:62px;
+				margin-top:5px;
+				display:block;
+				float:left;
+			}
+			.ff1 .aff1 .text1{
+				width:110px;
+				height:26px;
+				display:block;
+				float:right;
+				margin:25px 0px;
+				color:white;
+				font-weight:bold;
+				font-size:22px;
+				line-height:26px;
+			}
+			.ff2{
+				background: #ededed;
+			}
+			.ff2 .aff2{
+				width:303.98px;
+				height:78px;
+				display:block;
+				margin:17px 40px;
+			}
+			.ff2 .aff2 .img2{
+				width:122px;
+				height:62px;
+				margin-top:5px;
+				display:block;
+				float:left;
+			}
+			.ff2 .aff2 .text2{
+				width:110px;
+				height:26px;
+				display:block;
+				float:right;
+				margin:25px 0px;
+				color:white;
+				font-weight:bold;
+				font-size:22px;
+				line-height:26px;
+			}
+			.ff2,.ff3{
+				margin-left:12px;
+			}
+			.ff3 .aff3{
+				width:303.98px;
+				height:78px;
+				display:block;
+				margin:17px 40px;
+			}
+			.ff3 .aff3 .img3{
+				width:122px;
+				height:62px;
+				margin-top:5px;
+				display:block;
+				float:left;
+			}
+			.ff3 .aff3 .text3{
+				width:110px;
+				height:26px;
+				display:block;
+				float:right;
+				margin:25px 0px;
+				color:white;
+				font-weight:bold;
+				font-size:22px;
+				line-height:26px;
+			}
+			.fsecond{
+				height:225px;
+				border-bottom:1px solid #ededed;
+			}
+			.fsecond .table .tr th{
+				width:235px;
+				text-align:left;
+				font-size:18px;
+				color:#1f8657;				
+			}
+			.fsecond .table{
+				margin-left:31.5px;
+				color:#7b7b7b;
+			}
+			.fthird{
+				height:118px;				
+				border-bottom:1px solid #ededed;
+			}
+			/*底部第三行部分*/
+			.fthird .fthone{
+				width:588px;
+				height:44px;
+				padding:20px 0px;
+				margin-left:31.5px;				
+				float:left;
+			}
+			.fthird .fthone p{
+				width:588px;
+			}
+			.fthird .fthone span{
+				display:block;
+				width:60px;
+				height:14px;
+				padding:12px 0px;
+				float:left;
+				font-size:0.9375rem;
+				color:#7d7d7d;
+				font-weight:bold;
+			}
+			.fthird .fthone a{
+				display:block;
+				float:left;
+			
+			}
+			.fthird .fthone .fth1,.fth2{
+				width:42px;
+				height:42px;
+				background:#2aad6f;
+				margin-left:8px;
+				border:1px solid #1f8657;
+				border-radius:4px;
+			}
+			.fthird .fthone .fth2 img{
+					display:none;
+					position:absolute;
+					bottom:64px;
+					left:80px;
+			}
+			.fthird .fthone{
+				position: relative;
+			}
+			.fthird .fthone .fth2:hover img{
+				display: block;	
+			}
+			.fthird .fthone .fth3,.fth4{
+				width:60px;
+				height:12px;
+				margin-left:30px;
+				padding:12px 0px;
+				font-size:0.9375rem;
+				color:#7d7d7d;
+				font-weight:bold;
+			}
+			.fthird .fthtwo{
+				width:560px;
+				height:78px;
+				float:left;				
+				padding:20px 0px;
+				margin-left: 20px;
+			}
+			.fthird .fthtwo .fthtwo1,.fthtwo2{
+				width:50%;
+				
+				height:78px;
+				float:left;
+			}
+			.fthird .fthtwo .zuocircle,.youcircle{
+				width:67px;
+				height:67px;
+				border-radius:33.5px;
+				background:#2aad6f;
+				float:left;
+			}
+			.fthird .fthtwo .online{
+				width:178px;
+				margin-left:15px;
+				float:left;				
+			}
+			.fthird .fthtwo .online h4{
+				font-size:22px;
+				width:161.8px;
+				margin-top:10px;
+				color:#2aad6f;				
+			}
+			.fthird .fthtwo .online  p,.phone p{
+				color:#7d7d7d;
+			}		
+			.fthird .fthtwo .phone{
+				width:170px;				
+				margin-left:15px;
+				float:left;				
+			}
+			.fthird .fthtwo .phone h4{
+				font-size:22px;
+				margin-top: 10px;
+				color:#2aad6f;
+			}			
+			.ffourth{
+				height:88px;				
+			}
+			.ffourth .final{
+				width: 1200px;
+				height:40px;
+				margin-left: 31.5px;
+				padding: 24px 0px;
+			}
+			.ffourth .final p{
+				font-size:0.8125rem;
+				color:#7d7d7d;
+				letter-spacing: 0.01rem;
+				float:left;
+			}
+			.ffourth .final a{
+				margin-left:15px;
+			}
+			/*响应式*/
+			@media screen and (max-width:480px){
+				.container .header,.footer{
+					display:none;
+					}
+			}
+			@media screen and (max-width:460px){
+				.content .lunbo,.lunbo .lunbg{
+					width:460px;
+				}
+				.content .plus{
+					width:443px;
+					height:486px;
+				}
+				.content .plus .zuo,.you{
+					width:419px;
+					height:233px;
+					padding:12px;
+					clear:both;
+					margin-left:0;
+				}
+				.content .plus .zuo img,.you img{
+					width:419px;
+					height:233px;
+				}
+				.content .weibo{
+					width:443px;
+					height:1082px;
+					margin-top:100px;
+				}
+				.content .weibo .one,.two,.three{
+					width:419px;
+					height:339px;
+					margin-left:0px;
+					padding:0px 12px;
+					clear:both;
+					
+				}
+				.content .weibo .one{
+					margin-bottom:40px;
+				}
+				.content .weibo .one img{
+					width:419px;
+					height:260px;
+				}
+				.content .three #ifram {
+					width:419px;
+					height:339px;
+					margin-top:40px;
+				}
+				.content .two .c2,.c4,.c6{
+					margin-left:12px;
+				}
+				.content .huisebg{
+					width:443px;
+					height:522px;
+				}
+				.content .huisebg .vip{
+					widows:443px;
+					height:454px;
+					padding:40px 0px;
+				}
+				.content .huisebg .vip div{
+						width:221px;
+						height:222px;
+						margin-left:0px;
+						float:left;
+						position: relative;
+						overflow:hidden;
+
+				}
+				.content .huisebg .vip .vone .vvone{
+					width:84px;
+					height:84px;
+					position:absolute;
+					left:70px;
+					top:70px
+				}
+				.content .huisebg .vip .vtwo .vvtwo{
+					width:84px;
+					height:84px;
+					position:absolute;
+					left:70px;
+					top:70px
+				}
+				.content .huisebg .vip .vthree .vvthree{
+					width:84px;
+					height:84px;
+					position:absolute;
+					left:70px;
+					top:70px
+				}
+				.content .huisebg .vip .vfour .vvfour{
+					width:84px;
+					height:84px;
+					position:absolute;
+					left:70px;
+					top:70px
+				}
+				.content .huisebg .vip div p{
+					position: absolute;
+					top:30px;
+					margin:0 60px;
+					width:130px;
+
+				}
+			}
+			
+		</style>
+	</head>
+<body>
+	<div class="container">
+		<div class="fixedtwo">
+			<div class="fixed1"><a href="#top"><span>回到顶部</span></a></div>
+			<!-- 目前还没写意见反馈的锚点 -->
+			<div class="fixed2"><a href="#"><span>意见反馈</span></a></div>
+		</div>
+		<!--定义锚点-->
+			<a id="top"></a>
+		<div class="header">
+			<!--  -->
+			<div class="head1">
+				<div class="nav clear">
+						<ul class="nav1">
+							
+							<li><a href="">社区</a></li>
+							<li><a href="">ColorOS</a></li>
+							<li><a href="">软件商店</a></li>
+							<li><a href="">手机助手</a></li>
+							<li><a href="">云服务</a></li>
+						</ul>
+						<ul class="nav2">
+							<li><a href="">Global</a></li>
+							<li><a href="">注册</a></li>
+							<li><a href="">登录</a></li>
+						</ul>
+				</div>
+			</div>
+		<div class="head2">
+		
+			<img src="img/oppo_logo.png" class="logo">
+			<ul class="menu">
+				<li><a href="">服务</a></li>	
+				<li><a href="">体验店</a></li>	
+				<li class="shop"><a href="#">在线商城</a>
+					<ul class="sub-menu">
+						<li><a href="">手机</a></li>
+						<li><a href="">配件</a></li>
+						<li><a href="">购物指南</a></li>
+						<li><a href="">保障服务</a></li>
+					</ul>
+				</li>
+				<li><a href="">品牌</a></li>	
+				<li><a href="">产品</a></li>	
+				<li><a href="">首页</a></li>
+			</ul>
+		</div>
+		</div>
+		<div class="content">
+				<div class="lunbo"><img src="img/tu1.jpg" width="1263px" height="525px" class="lunbg"></div>
+				<div class="plus">
+					<div class="zuo">
+						<a href="#"><img src="img/r9.jpg"></a>
+					</div>
+					<div class="you">
+						<a href="#"><img src="img/r9plus.jpg"></a>
+					</div>
+				</div>
+				<div class="weibo">
+					<div class="one">
+						<h2>探秘OPPO</h2>
+						<a href="#"><h3>了解OPPO品牌故事</h3></a>
+						<div class="zhimei"><img src="img/zhimei.jpg"></div>
+					</div>
+					<div class="two">
+						<h2>OPPO最新新闻</h2>
+						<a href="#"><h3>了解OPPO最新市场动态</h3></a>
+						<div class="c1"></div>
+						<div class="c2">
+							<a href="#"><p>OPPO R9雪岩灰版开箱图赏</p></a>
+						</div>
+						<div class="c3"></div>
+						<div class="c4">
+							<a href="#"><p>OPPO R9系列平均1.1秒销售一台</p></a>
+						</div>
+						<div class="c5"></div>
+						<div class="c6">
+							<a href="#"><p>你的双手是孩子温暖的依靠 OPPO六一行动</p></a>
+						</div>
+					</div>
+					<div class="three">
+						<iframe src="img/index.html" id="ifram"></iframe>
+					</div>
+				</div>
+			<div class="huisebg">	
+				<div class="vip">
+						<div class="vone">
+							<a href="#"><p>会员好礼</p>							
+    						<div class="vvone"></div></a>
+						</div>
+						<div class="vtwo">
+							<a href="#"><p>需要帮助？</p>
+    						<div class="vvtwo"></div></a>
+						</div>
+						<div class="vthree">
+							<a href="#"><p>附近的体验店</p>
+    						<div class="vvthree"></div></a>
+						</div>
+						<div class="vfour">	
+							<a href="#"><p>OPPO品牌</p>
+    						<div class="vvfour"></div></a>
+						</div>
+				</div>
+			</div>
+			</div>		
+		<div class="footer">
+			<div class="footline">
+				<div class="ffirst">
+					<div class="ff1">
+						<a href="#" class="aff1">
+							<span class="img1">
+								<img src="img/info.png">
+							</span>
+							<span class="text1">OPPO社区</span>
+						</a>
+					</div>
+					<div class="ff2">
+						<a href="#" class="aff2">
+							<span class="img2"><img src="img/coloros.png"></span>
+							<span class="text2">ColorOS</span>
+						</a>
+					</div>
+					<div class="ff3">
+						<a href="#" class="aff3">
+							<span class="img3"><img src="img/img3.png"></span>
+							<span class="text3">软件商店</span>
+						</a>
+					</div>
+				</div>
+				<div class="fsecond">					
+					<table height="204px" class="table">
+						<tr class="tr">
+							<th><a href="">推荐机型</a></th>
+							<th>在线购买</th>
+							<th>服务</th>
+							<th>会员相关</th>
+							<th>OPPO品牌</th>
+						</tr>
+						<tr>
+							<td>R9</td>
+							<td>手机</td>
+							<td>购买帮助</td>
+							<td>会员登录</td>
+							<td>关于OPPO</td>
+						</tr>
+						<tr>
+							<td>R7s</td>
+							<td>配件</td>
+							<td>物流查询</td>
+							<td>会员注册</td>
+							<td>咨讯</td>
+						</tr>
+						<tr>
+							<td>R7 Plus</td>
+							<td>购买指南</td>
+							<td>产品相关问题</td>
+							<td></td>
+							<td>摄影作品</td>
+						</tr>
+						<tr>
+							<td>R7</td>
+							<td>购买保障服务</td>
+							<td>服务政策</td>
+							<td></td>
+							<td>我们的视频</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>官方授权网店</td>
+							<td>服务网点查询</td>
+							<td></td>
+							<td></td>
+						</tr>					
+					</table>
+				</div>
+				<div class="fthird">
+					<div class="fthone">
+						<p>
+							<span class="text">关注我们</span>
+							<a href="#" class="fth1"></a>
+							<a href="#" class="fth2"><img src="img/wx.png"></a>
+							<a href="#" class="fth3">加入我们</a>
+							<a href="#" class="fth4">采购相关</a>
+						</p>
+					</div>
+					<div class="fthtwo">
+						<div class="fthtwo1"><a href="#">
+							<div class="zuocircle"></div>
+							<div class="online">
+								<h4>在线客服</h4>
+								<p>人工服务：8:30~22:00</p>
+								<p>24小时智能机器人服务</p>
+							</div>
+							</a>
+						</div>
+						<div class="fthtwo2"><a href="#">
+							<div class="youcircle">
+
+							</div>
+							<div class="phone">
+								<h4>4001-666-888</h4>
+								<p>7*24小时客服电话</p>
+							</div>
+						</a>
+						</div>
+					</div>
+
+				</div>
+				<div class="ffourth">
+					<div class="final">
+						<p>&copy2005-2016东莞市永盛通信科技有限公司 版权所有 粤ICP备08130115号-1 联系电话：4001-666-888</p>
+						<a href="#"><img src="img/huizhang.png"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+</div>
+	</body>
+</html>
